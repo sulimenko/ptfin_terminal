@@ -19,7 +19,7 @@
               <portfolio />
             </div>
             <div class="bottom">
-              Orders
+              <order />
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default {
 
       .bottom {
         flex-grow: .5;
-
+        display: block;
       }
     }
   }
