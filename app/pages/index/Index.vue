@@ -7,7 +7,7 @@
             CHART
           </div>
           <div class="right">
-            <watch-list/>
+            <watch-list />
           </div>
         </div>
         <div class="bottom">
@@ -15,8 +15,12 @@
             ORDER
           </div>
           <div class="right">
-            <div class="top">1</div>
-            <div class="bottom">2</div>
+            <div class="top">
+              <portfolio />
+            </div>
+            <div class="bottom">
+              Orders
+            </div>
           </div>
         </div>
       </div>
@@ -34,20 +38,21 @@ export default {
 
 <style lang="scss" scoped>
 .main-page {
-  .wrap{
+  .wrap {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
+
   .top {
     height: 50vh;
     display: flex;
 
-    .left{
+    .left {
       flex: 5;
     }
 
-    .right{
+    .right {
       flex: 2;
     }
   }
@@ -56,22 +61,22 @@ export default {
     flex-grow: .5;
     display: flex;
 
-    .left{
+    .left {
       flex: 2;
       background: rgba(165, 42, 42, 0.27);
     }
 
-    .right{
+    .right {
       flex: 4;
       display: flex;
       flex-direction: column;
 
-      .top{
+      .top {
         flex-grow: .5;
-
+        display: block;
       }
 
-      .bottom{
+      .bottom {
         flex-grow: .5;
 
       }
