@@ -11,19 +11,19 @@ export default {
   data() {
     return {
       column: [
-        { name: 'fir', title: 'Symbol', },
-        { name: 'sec', title: 'Type', },
-        { name: 'third', title: 'Qty.', },
-        { name: 'fourth', title: 'Average Cost', },
-        { name: 'fifth', title: 'Amount', },
-        { name: 'sixth', title: 'Status', },
-        { name: 'seventh', title: 'Time', },
+        { name: 'sym', title: 'Symbol', },
+        { name: 'type', title: 'Type', },
+        { name: 'price', title: 'Price', },
+        { name: 'qty', title: 'Qty.', },
+        { name: 'amnt', title: 'Amount', },
+        { name: 'stat', title: 'Status', },
+        { name: 'time', title: 'Time', },
       ],
       data: [
-        { fir: 'AAPL', sec: 'Limit BUY @ $139', third: '1000', fourth: '$188 132,00', fifth: '+$4 186,00', sixth: 'Filled', seventh: '10 days ago', },
-        { fir: 'AG', sec: 'Limit BUY @ $13', third: '300', fourth: '$1 132,00', fifth: '+$3 186,00', sixth: 'Filled', seventh: 'a month ago', },
-        { fir: 'Z', sec: 'Limit BUY @ $12', third: '200', fourth: '$11 132,00', fifth: '+$2 186,00', sixth: 'Filled', seventh: 'a month ago', },
-        { fir: 'MRNA', sec: 'Limit BUY @ $11', third: '100', fourth: '$18 132,00', fifth: '+$1 186,00', sixth: 'Filled', seventh: 'a month ago', },
+        { sym: 'AAPL', type: 'Limit BUY', qty: '1000', price: '$139', amnt: '+$4 186,00', stat: 'Filled', time: '10 days ago', },
+        { sym: 'AG', type: 'Limit BUY', qty: '300', price: '$19', amnt: '+$3 186,00', stat: 'Filled', time: 'a month ago', },
+        { sym: 'Z', type: 'Limit BUY', qty: '200', price: '$12', amnt: '+$2 186,00', stat: 'Filled', time: 'a month ago', },
+        { sym: 'MRNA', type: 'Limit BUY', qty: '100', price: '$11', amnt: '+$1 186,00', stat: 'Filled', time: 'a month ago', },
       ],
     }
   },

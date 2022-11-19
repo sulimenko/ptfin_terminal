@@ -13,16 +13,17 @@ export default {
     return {
       column: [
         { name: 'fir', title: 'Symbol', },
-        { name: 'sec', title: 'Type', },
-        { name: 'third', title: 'Qty.', },
+        { name: 'sec', title: 'Price', },
+        { name: 'third', title: 'Qty', },
         { name: 'fourth', title: 'Market Value', },
-        { name: 'fifth', title: 'Profit Loss', },
+        { name: 'fifth', title: 'Average Price', },
+        { name: 'sixth', title: 'Profit/Loss', },
       ],
       data: [
-        { fir: 'MRNA', sec: '$181,32', third: '100', fourth: '$18 132,00', fifth: '+$1 186,00', },
-        { fir: 'Z', sec: '$11,32', third: '200', fourth: '$11 132,00', fifth: '+$2 186,00', },
-        { fir: 'AG', sec: '$1', third: '300', fourth: '$1 132,00', fifth: '+$3 186,00', },
-        { fir: 'AAPL', sec: '$18,32', third: '1000', fourth: '$188 132,00', fifth: '+$4 186,00', },
+        { fir: 'MRNA', sec: '$181,32', third: '100', fourth: '$18 132,00', fifth: '$1 186,00', sixth: '+$181', },
+        { fir: 'Z', sec: '$11,32', third: '200', fourth: '$11 132,00', fifth: '$2 186,00', sixth: '+$181', },
+        { fir: 'AG', sec: '$1', third: '300', fourth: '$1 132,00', fifth: '$3 186,00', sixth: '+$181', },
+        { fir: 'AAPL', sec: '$18,32', third: '1000', fourth: '$188 132,00', fifth: '$4 186,00', sixth: '+$181', },
       ],
     }
   },
