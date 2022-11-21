@@ -15,7 +15,7 @@
         </div>
         <div class="bottom">
           <div class="left">
-            ORDER
+            <order-form />
           </div>
           <div class="right">
             <div class="top">
@@ -80,7 +80,6 @@ export default {
 
     .left {
       flex: 2;
-      background: rgba(165, 42, 42, 0.27);
     }
 
     .right {
