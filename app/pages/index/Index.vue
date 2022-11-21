@@ -4,7 +4,10 @@
       <div class="wrap">
         <div class="top">
           <div class="left">
-            CHART
+            <!-- <trading-vue :data="this.$data"></trading-vue> -->
+            <!-- <chart style="height: 100%;" /> -->
+            <chart class="chart" />
+            <!-- <div id="chart" style="height: 50%"></div> -->
           </div>
           <div class="right">
             <watch-list />
@@ -33,6 +36,17 @@
 
 export default {
   name: 'PageIndex',
+  data() {
+    return {}
+  },
+  created() {
+    this.test()
+  },
+  methods: {
+    test() {
+      console.log(123)
+    },
+  },
 }
 </script>
 
@@ -50,6 +64,9 @@ export default {
 
     .left {
       flex: 5;
+      .chart {
+        height: 100%;
+      }
     }
 
     .right {
