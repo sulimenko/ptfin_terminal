@@ -30,7 +30,7 @@ export default function() {
         bottom: 0.1,
       },
       // 'candle_solid'|'candle_stroke'|'candle_up_stroke'|'candle_down_stroke'|'ohlc'|'area'
-      type: 'candle_solid',
+      type: 'candle_stroke',
       bar: {
         upColor: '#59CC9F',
         downColor: '#FF8383',
@@ -95,8 +95,10 @@ export default function() {
         },
       },
       tooltip: {
-        showRule: 'always',
-        showType: 'standard',
+        // 'always' | 'follow_cross' | 'none'
+        showRule: 'follow_cross',
+        // 'standard' | 'rect'
+        showType: 'rect',
         labels: [ '', 'Open: ', 'Close: ', 'High: ', 'Low: ', 'Volume: ', ],
         values: null,
         defaultValue: 'n/a',
@@ -159,7 +161,10 @@ export default function() {
         },
       },
       tooltip: {
-        showRule: 'always',
+        // 'always' | 'follow_cross' | 'none'
+        showRule: 'follow_cross',
+        // 'standard' | 'rect'
+        showType: 'standard',
         showName: true,
         showParams: true,
         defaultValue: 'n/a',
@@ -287,6 +292,116 @@ export default function() {
         },
       },
     },
+    shape: {
+      point: {
+        backgroundColor: '#2196F3',
+        borderColor: '#2196F3',
+        borderSize: 1,
+        radius: 4,
+        activeBackgroundColor: '#2196F3',
+        activeBorderColor: '#2196F3',
+        activeBorderSize: 1,
+        activeRadius: 6,
+      },
+      line: {
+        // 'solid'|'dash'
+        style: 'solid',
+        color: '#2196F3',
+        size: 1,
+        dashValue: [ 2, 2, ],
+      },
+      polygon: {
+        // 'stroke'|'fill'
+        style: 'stroke',
+        stroke: {
+          // 'solid'|'dash'
+          style: 'solid',
+          size: 1,
+          color: '#2196F3',
+          dashValue: [ 2, 2, ],
+        },
+        fill: {
+          color: 'rgba(33, 150, 243, 0.1)',
+        },
+      },
+      arc: {
+        // 'stroke'|'fill'
+        style: 'stroke',
+        stroke: {
+          // 'solid'|'dash'
+          style: 'solid',
+          size: 1,
+          color: '#2196F3',
+          dashValue: [ 2, 2, ],
+        },
+        fill: {
+          color: '#2196F3',
+        },
+      },
+      text: {
+        style: 'fill',
+        color: '#2196F3',
+        size: 12,
+        family: font.family,
+        weight: font.weight,
+        offset: [ 0, 0, ],
+      },
+    },
+    annotation: {
+      // 'top' | 'bottom' | 'point'
+      position: 'top',
+      offset: [ 20, 0, ],
+      symbol: {
+        // 'diamond' | 'circle' | 'rect' | 'triangle' | 'custom' | 'none'
+        type: 'diamond',
+        size: 8,
+        color: '#2196F3',
+        activeSize: 10,
+        activeColor: '#FF9600',
+      },
+    },
+    tag: {
+      // 'top' | 'bottom' | 'point'
+      position: 'point',
+      offset: 0,
+      line: {
+        show: true,
+        // 'solid'|'dash'
+        style: 'solid',
+        dashValue: [ 4, 2, ],
+        size: 1,
+        color: '#2196F3',
+      },
+      text: {
+        color: '#FFFFFF',
+        backgroundColor: '#2196F3',
+        size: 12,
+        family: font.family,
+        weight: font.weight,
+        paddingLeft: 2,
+        paddingRight: 2,
+        paddingTop: 2,
+        paddingBottom: 2,
+        borderRadius: 2,
+        borderSize: 1,
+        borderColor: '#2196F3',
+      },
+      mark: {
+        offset: 0,
+        color: '#FFFFFF',
+        backgroundColor: '#2196F3',
+        size: 12,
+        family: font.family,
+        weight: font.weight,
+        paddingLeft: 2,
+        paddingRight: 2,
+        paddingTop: 2,
+        paddingBottom: 2,
+        borderRadius: 2,
+        borderSize: 1,
+        borderColor: '#2196F3',
+      },
+    },
     graphicMark: {
       line: {
         color: '#2196F3',
@@ -332,7 +447,8 @@ export default function() {
       },
     },
   }
-  console.log(options)
+
+  // console.log(options)
   return options
 //     switch (name) {
 //     case light

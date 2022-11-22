@@ -6,8 +6,11 @@
 <script>
     
 import klinecharts from 'klinecharts'
-import chartData from './chartData'
+import chartDemoData from './chartDemoData'
 import options from './themes'
+// const Alpaca = require('@alpacahq/alpaca-trade-api')
+// const API_KEY = 'PK90WL66BX85OKJY1NAN'
+// const API_SECRET = 'ZfTHCFvPdCzDUYySbZl0LAhIikMc36rIJFPeB2NF'
     
 export default {
   name: 'Index',
@@ -21,7 +24,56 @@ export default {
   },
   mounted() {
     this.kLineChart = klinecharts.init('chart')
-    this.dataset = chartData()
+    
+    // const alpaca = new Alpaca({
+    //   keyId: API_KEY,
+    //   secretKey: API_SECRET,
+    //   paper: true,
+    // })
+
+    // const socket = alpaca.data_stream_v2
+    
+    // socket.onConnect(() => {
+    //   console.log('Connected')
+    //   socket.subscribeForQuotes([ 'AAPL', ])
+    //   // socket.subscribeForTrades(['FB'])
+    //   socket.subscribeForBars([ 'SPY', ])
+    // })
+    // socket.onError((err) => {
+    //   console.log(err)
+    // })
+    // socket.onStockTrade((trade) => {
+    //   console.log(trade)
+    // })
+    // socket.onStockQuote((quote) => {
+    //   console.log(quote)
+    // })
+    // socket.onStockBar((bar) => {
+    //   console.log(bar)
+    // })
+    // socket.onStatuses((s) => {
+    //   console.log(s)
+    // })
+    // socket.onStateChange((state) => {
+    //   console.log(state)
+    // })
+    // socket.onDisconnect(() => {
+    //   console.log('Disconnected')
+    // })
+
+    // socket.connect()
+
+    // const iex = new IEXCloudClient(fetch, { 
+    //   sandbox: true,
+    //   publishable: 'pk_a6db44bcdad54749b507019c34e5c7e4',
+    //   version: 'stable',
+    // })
+
+    // iex.symbol('tsla')
+    //   .chart('6m', { chartCloseOnly: false, })
+    //   .then((res) => console.log(res))
+
+    this.dataset = chartDemoData()
     this.timeframediff = Math.abs(
       this.dataset[0].timestamp - this.dataset[1].timestamp
     )

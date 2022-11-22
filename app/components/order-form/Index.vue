@@ -44,10 +44,10 @@ export default {
       optionsTime: [
         { value: 'GTC', title: 'GTC - Good till Canceled', },
         { value: 'DAY', title: 'DAY', },
-        { value: 'FOK', title: 'FOK - Fill or Kill', },
-        { value: 'IOC', title: 'IOC - Immediate or Cancel', },
-        { value: 'OPG', title: 'OPG - At the Open', },
-        { value: 'CLS', title: 'CLS - At the Close', },
+        // { value: 'FOK', title: 'FOK - Fill or Kill', },
+        // { value: 'IOC', title: 'IOC - Immediate or Cancel', },
+        // { value: 'OPG', title: 'OPG - At the Open', },
+        // { value: 'CLS', title: 'CLS - At the Close', },
       ],
     }
   },
